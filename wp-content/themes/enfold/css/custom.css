@@ -2,7 +2,12 @@
 
 /* General Custom CSS */
 
-
+.menu{text-transform:uppercase;}
+.slide-entry{background-color:#FFFFFF;height:450px;}
+.slide-content{padding:10px;}
+#firstparallaxdiv{height:400px;}
+#secondparallaxdiv{height:400px;}
+#homepagefooterdiv{height:693px;}
 
 
 /*
