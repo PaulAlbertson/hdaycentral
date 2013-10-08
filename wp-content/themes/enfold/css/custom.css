@@ -2,12 +2,31 @@
 
 /* General Custom CSS */
 
+/* Home page custom css
+ ================================================
+ */
 .menu{text-transform:uppercase;}
-.slide-entry{background-color:#FFFFFF;height:450px;}
-.slide-content{padding:10px;}
-#firstparallaxdiv{height:400px;}
-#secondparallaxdiv{height:400px;}
-#homepagefooterdiv{height:693px;}
+.title_container{display:none;}
+/*.slide-entry{background-color:#FFFFFF;}*/
+/*.slide-content{padding-bottom:40px;background-color:#FFFFFF;}*/
+#firstparallaxdiv{height:383px; padding-top: 120px;}
+#secondparallaxdiv{height:400px; padding-top:200px;}
+#hmtwitterdisplaydiv{height:200px; font-size:32px; font-weight:bold; color:#ffffff;}
+#hmpagefooterdiv{height:400px;}
+#hmpagefooterlogodiv{padding-bottom:45px;}
+#hmpagefootercopyright{padding-top:30px; font-weight:bold;}
+#twitterfeedicon{text-align: center;padding-bottom:20px;}
+#twitterfeed{text-align: center; }
+
+
+
+.hmfeaturedetailtxt{color:#FFFFFF; font-weight:bold; text-align: center;margin:0px; padding:0px;}
+.hmpagedividerarrow{padding-top:15px; padding-bottom:5px;}
+.hmpagedividertxttop{font-size:13px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:30px;}
+.hmpagedividertxtbottom{font-size:13px; text-align: center; text-transform:uppercase; font-weight:bold; padding-top:30px; padding-bottom:5px;}
+.hmpagefooterpixelseparator{background-color:#939499; height:1px; width:100%;}
+.socialicon{padding-right:30px; padding-top:35px; padding-bottom:35px;}
+h2.hmpagefeatureh2{color:#FFFFFF; text-align: center; margin:0px; padding:0px;}
 
 
 /*
