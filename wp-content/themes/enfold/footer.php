@@ -54,9 +54,6 @@
 						?>
 
 
-					</div>
-
-
 				<!-- ####### END FOOTER CONTAINER ####### -->
 				</div>
 

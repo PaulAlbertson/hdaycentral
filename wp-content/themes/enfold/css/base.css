@@ -351,11 +351,24 @@ max-width:100%;
 	-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
 	height:100%; width:100%; position: fixed; z-index: 0; top:0; left:0;
 	}
-
-	.image-overlay{position: absolute; background: #fff; z-index: 500; height:100%; width:100%; opacity: 0; filter:alpha(opacity=0);}
+/* 
+ * ==========================================================================================================================================
+ * INNOCEAN - Avia Image (Portfolio) overlay css
+ * ==========================================================================================================================================
+ */
+	/*.image-overlay{position: absolute; background: #fff; z-index: 500; height:100%; width:100%; opacity: 0; filter:alpha(opacity=0);}
 	.image-overlay .image-overlay-inside{height:100%; width:100%; position: absolute; left:0; top:0;}
 	.image-overlay .image-overlay-inside:before{position: absolute; border-radius: 50px; background: #000; height:80px; width:80px; line-height:80px; left:50%; top:50%; margin: -40px 0 0 -40px; z-index: 500; text-align: center; color:#fff;}
 	.image-overlay .image-overlay-inside:before{content:"\E744"; font-family: 'entypo-fontello'; font-size: 18px; font-weight: normal; }
+	.image-overlay.overlay-type-extern .image-overlay-inside:before{content:"\27A6";}
+	.image-overlay.overlay-type-video .image-overlay-inside:before{content:"\25B6";}
+	#top .hide-inner-overlay .image-overlay-inside{display: none;}*/
+	
+	.image-overlay{position: absolute; background: #fff; z-index: 500; height:100%; width:100%; opacity: 0; filter:alpha(opacity=0);}
+	.image-overlay-inside{position: absolute; left:0; top:-220;}
+	/*.image-overlay .image-overlay-inside{height:100%; width:100%; position: absolute; left:0; top:0;}*/
+	/*.image-overlay .image-overlay-inside:before{position: absolute; border-radius: 50px; background: #000; height:80px; width:80px; line-height:80px; left:50%; top:50%; margin: -40px 0 0 -40px; z-index: 500; text-align: center; color:#fff;}
+	.image-overlay .image-overlay-inside:before{content:"\E744"; font-family: 'entypo-fontello'; font-size: 18px; font-weight: normal; }*/
 	.image-overlay.overlay-type-extern .image-overlay-inside:before{content:"\27A6";}
 	.image-overlay.overlay-type-video .image-overlay-inside:before{content:"\25B6";}
 	#top .hide-inner-overlay .image-overlay-inside{display: none;}

@@ -406,15 +406,30 @@ console.log("elementYPosition: "+elementYPosition);
                if(!link.css('display') || link.css('display') == 'inline') { link.css({display:'inline-block'}); }
             }
         });
-
+		/*
+		 * INNOCEAN - was able to resolve the mouseenter and mouseleave events below... so no need for this.
+		 */
+		// elements.hover(
+			// function(){
+				 	// var grid_temp = $(this).parent().find('.grid-content'),
+				 		// myCurrent = $(this).find('img:first');
+						// grid_temp.clearQueue().finish().animate({top:myCurrent.height() - 42, height:grid_temp.height() + 66},200);
+			// }, function(){
+					// var grid_temp = $(this).parent().find('.grid-content');
+					// grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-18},200);
+			// });
+// 		
 		elements.on('mouseenter', function(e)
 		{
 			var link  		= $(this),
 				current	 	= link.find('img:first'),
 				url		 	= link.attr('href'),
 				span_class	= "overlay-type-video",
-				opa			= link.data('opacity') || 0.7;
-
+				/* INNOCEAN
+				 * Hacking this value from 0.7 to remove the overlay animation and swap with the slide up reveal
+				 */
+				opa			= link.data('opacity') || 0;
+			var grid		= link.parent().find('.grid-content');
 			overlay = link.find('.image-overlay');
 
 			if(!overlay.length)
@@ -423,33 +438,51 @@ console.log("elementYPosition: "+elementYPosition);
 				{
 				if(link.height() == 0) { link.addClass(current.get(0).className); current.get(0).className = ""; }
 				if(!link.css('position') || link.css('position') == 'static') { link.css({position:'relative', overflow:'hidden'}); }
-				if(!link.css('display') || link.css('display') == 'inline') { link.css({display:'block'}); }
+				/*
+				 * INNOCEAN - Changes display: to linline from block. Was causing footer links to reposition on new lines
+				 */
+				if(!link.css('display') || link.css('display') == 'inline') { link.css({display:'inline'}); }
 
 				if(url)
 				{
 					if( url.match(/(jpg|gif|jpeg|png|tif)/) ) span_class = "overlay-type-image";
 					if(!url.match(/(jpg|gif|jpeg|png|\.tif|\.mov|\.swf|vimeo\.com|youtube\.com)/) ) span_class = "overlay-type-extern";
 				}
-
-				overlay = $("<span class='image-overlay "+span_class+"' style='opacity: 0;'><span class='image-overlay-inside'></span></span>").appendTo(link);
+/* 
+ * ==========================================================================================================================================
+ * INNOCEAN - Avia Image (Portfolio) overlay control
+ * ==========================================================================================================================================
+ */
+				// overlay = $("<span class='image-overlay "+span_class+"' style='opacity: 0;'><span class='image-overlay-inside'></span></span>").appendTo(link);
+				//overlay = $("<span class='image-overlay-inside'></span>").appendTo(link);
+				//console.log(current);
+				//console.log(grid);
+				//overlay = $('.grid-content');
 				}
 			}
 
 			if(current.outerHeight() > 100)
 			{
-				overlay.css({left:current.position().left + parseInt(current.css("margin-left"),10), top:current.position().top + parseInt(current.css("margin-top"),10)})
-					   .css({display:'block','height':current.outerHeight(),'width':current.outerWidth()}).stop().animate({opacity:opa}, 400);
+				// overlay.css({left:current.position().left + parseInt(current.css("margin-left"),10), top:current.position().top + parseInt(current.css("margin-top"),10)});
+					   // .css({display:'block','height':current.outerHeight(),'width':current.outerWidth()}).stop().animate({opacity:opa}, 400);
+					 
+					 var grid_temp = $(this).parent().find('.grid-content');
+					  grid_temp.clearQueue().finish().animate({top:current.height() - 42, height:grid_temp.height() + 66},200);
 			}
 			else
 			{
 				overlay.css({display:"none"});
 			}
 
-		}).on('mouseleave', elements, function(){
-
+		}).on('mouseleave', elements, function(e){
+			
+			var grid_temp = $(this).parent().find('.grid-content');
+			grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-18},200);
+			
 			if(overlay.length)
 			{
-				overlay.stop().animate({opacity:0}, 400);
+				//overlay.stop().animate({opacity:0}, 400);
+				//grid.css({display:'block','height': '50px', 'top':'0px'});
 			}
 		});
 
@@ -855,14 +888,12 @@ console.log("elementYPosition: "+elementYPosition);
 
 		   },
 		  _customModeLayout : function( $elems ) {
-
 		    var instance		= this,
 		        containerWidth	= this.element.width(),
 		        props			= this.fitRows,
 		        percentBase 	= this.element.data('margin_base') || 6,
 		        margin			= this.element.is('.no_margin-container') ? 0 : (containerWidth / 100) * percentBase, //margin based on %
 		        extraRange		= 2; // adds a little range for % based calculation error in some browsers
-
 		      $elems.each( function() {
 		        var $this = $(this),
 		            atomW = $this.outerWidth() ,
@@ -880,7 +911,9 @@ console.log("elementYPosition: "+elementYPosition);
 
 		        // position the atom
 		        instance._pushPosition( $this, props.x, props.y );
-
+				// console.log("props.y: "+props.y);
+				// console.log("atomH: "+atomH);
+				// console.log("props.height : "+props.height );
 		        props.height = Math.max( props.y + atomH, props.height );
 		        props.x += atomW + margin;
 
@@ -911,10 +944,14 @@ console.log("elementYPosition: "+elementYPosition);
 				links			= filter.find('a'),
 				imgParent		= container.find('.grid-image'),
 				isoActive		= false,
-				items			= $('.post-entry', container);
+				items			= $('.post-entry', container),
+				grid_temp = container.find('.grid-content');
 
 			function applyIso()
 			{
+				// INNOCEAN - Call function to reset text block under resized image
+				goGrid();
+				//
 				container.addClass('isotope_activated').isotope({
 					layoutMode : 'customMode', itemSelector : '.flex_column'
 				}, function()
@@ -925,7 +962,11 @@ console.log("elementYPosition: "+elementYPosition);
 				isoActive = true;
 				setTimeout(function(){ parentContainer.addClass('avia_sortable_active'); }, 0);
 			};
-
+			// INNOCEAN
+			function goGrid(){
+				grid_temp.animate({top:imgParent.height()},200);
+			};
+			//
 			links.bind('click',function()
 			{
 				var current		= $(this),

@@ -11,6 +11,15 @@
     #Mobile (Landscape)
     #Clearing */
 
+// Innocean Mods Start
+@portfolioCopyWidthLarge:750px;
+@portfolioCopyWidthXLargeMargin:20%;
+@portfolioCopyWidthLargeMargin:15%;
+@portfolioCopyWidthMedMargin:10%;
+
+// Innocean End
+
+
 @gutter:50px;
 @columns:12;
 @maxWidth:1010px;                //default width     //working: 990px&30    - 1010px & 50
@@ -69,16 +78,23 @@
     #top .offset-by-ten                   { .offset(10) }
     #top .offset-by-eleven                { .offset(11) }
     
- 
 
-	     
-    
+
+/* #Desktop Between 989 - 1140
+================================================== */
+  @media only screen and (min-width: 989px) and (max-width: 1140px) {
+   // Article copy width mod
+    .avia_textblock{width:@portfolioCopyWidthLarge; margin-left:@portfolioCopyWidthMedMargin;}
+  }
+
  /* #Desktop - Large
 ================================================== */   
     
 
     @media only screen and (min-width: 1140px)  
     {
+       // Article copy width mod
+        .avia_textblock{width:@portfolioCopyWidthLarge; margin-left:@portfolioCopyWidthLargeMargin;}
         
         .columns(@num: 1){  @contentWidth: (@maxWidthLarge - (2* @gutter)); @single: (@contentWidth - (@gutter * (@columns - 1))) / @columns; width: (@single * @num) + (@gutter * (@num - 1));  }
         .offset(@num: 1) {  @contentWidth: (@maxWidthLarge - (2* @gutter)); @single: (@contentWidth - (@gutter * (@columns - 1))) / @columns; padding-left: (@single + @gutter) * @num; }
@@ -125,6 +141,8 @@
 
     @media only screen and (min-width: 1340px)  
     {
+      // Article copy width mod
+        .avia_textblock{width:@portfolioCopyWidthLarge; margin-left:@portfolioCopyWidthXLargeMargin;}
         
         .columns(@num: 1){  @contentWidth: (@maxWidthExtraLarge - (2* @gutter)); @single: (@contentWidth - (@gutter * (@columns - 1))) / @columns; width: (@single * @num) + (@gutter * (@num - 1));  }
         .offset(@num: 1) {  @contentWidth: (@maxWidthExtraLarge - (2* @gutter)); @single: (@contentWidth - (@gutter * (@columns - 1))) / @columns; padding-left: (@single + @gutter) * @num; }

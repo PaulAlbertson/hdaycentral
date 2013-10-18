@@ -11,22 +11,40 @@
 /*.slide-content{padding-bottom:40px;background-color:#FFFFFF;}*/
 #firstparallaxdiv{height:383px; padding-top: 120px;}
 #secondparallaxdiv{height:400px; padding-top:200px;}
-#hmtwitterdisplaydiv{height:200px; font-size:32px; font-weight:bold; color:#ffffff;}
-#hmpagefooterdiv{height:400px;}
-#hmpagefooterlogodiv{padding-bottom:45px;}
-#hmpagefootercopyright{padding-top:30px; font-weight:bold;}
-#twitterfeedicon{text-align: center;padding-bottom:20px;}
 #twitterfeed{text-align: center; }
-
+#after_full_slider_1{background-color:#dbdbdb;}
 
 
 .hmfeaturedetailtxt{color:#FFFFFF; font-weight:bold; text-align: center;margin:0px; padding:0px;}
 .hmpagedividerarrow{padding-top:15px; padding-bottom:5px;}
-.hmpagedividertxttop{font-size:13px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:30px;}
-.hmpagedividertxtbottom{font-size:13px; text-align: center; text-transform:uppercase; font-weight:bold; padding-top:30px; padding-bottom:5px;}
-.hmpagefooterpixelseparator{background-color:#939499; height:1px; width:100%;}
+.hmpagedividertxttop{color:#848484; font-size:13px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:30px;}
+.hmpagedividertxtbottom{font-size:13px; text-align: center; text-transform:uppercase; font-weight:bold; padding-top:5px; padding-bottom:5px;}
+.hmpagefooterpixelseparator{background-color:#363842; height:1px; width:100%;}
 .socialicon{padding-right:30px; padding-top:35px; padding-bottom:35px;}
+/*.slide-3 .slideshow_caption {color:#000000;}
+.slide-3 .slideshow_caption .avia-caption-title{color:#000000;}*/
 h2.hmpagefeatureh2{color:#FFFFFF; text-align: center; margin:0px; padding:0px;}
+
+/* Portfolio pages
+ ==================================================
+ */
+
+h1.portpagefeatureh1{color:#000000; text-align: center; margin:0px; padding:0px;}
+.portpagedividerarrow{padding-top:5px; padding-bottom:20px;}
+.portpagedatetext{font-size:13px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:5px;}
+.portpagerelstoriestext{font-size:14px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:5px;}
+.main_color .container_wrap .fullsize{background-color:#045675;}
+
+/* Footer
+ ==================================================
+ */
+#hmtwitterdisplaydiv{height:200px; font-size:32px; font-weight:bold; color:#ffffff;}
+#hmpagefooterdiv{height:400px;}
+#hmpagefooterlogodiv{padding-bottom:45px;padding-top:60px; }
+#hmpagefootercopyright{padding-top:30px; font-weight:bold;}
+#twitterfeedicon{text-align: center;padding-bottom:20px;}
+/*a.footerSocialIconLink{display:inline;}*/
+
 
 
 /*
@@ -36,10 +54,21 @@ Desktop Styles
 
 @media only screen and (min-width: 768px) {
   /* Add your Desktop Styles here */
-
+  /*.avia_textblock{width:750px; margin-left:15%;}*/
+	.grid-entry-title{font-size:11px; margin:0; padding:7px; font-weight: 700;}
+	.grid-entry-excerpt{font-size: 9px; font-style: italic; margin-bottom: -2px;}
 }
 
+@media only screen and (min-width: 989px) and (max-width: 1140px) {
+  	.grid-entry-title{font-size:14px; margin:0; padding-top:4px; padding-bottom:7px; font-weight: 700;}
+	.grid-entry-excerpt{font-size: 12px; font-style: italic; margin-bottom: -2px;}
+}
 
+@media only screen and (min-width: 1140px) {
+  /* Add your Desktop Styles here */
+	.grid-entry-title{font-size:14px; margin:0; padding:7px; font-weight: 700;}
+	.grid-entry-excerpt{font-size: 12px; font-style: italic; margin-bottom: -2px;}
+}
 
 /*
 Mobile Styles
@@ -48,5 +77,7 @@ Mobile Styles
 
 @media only screen and (max-width: 767px) {
   /* Add your Mobile Styles here */
+	.grid-entry-title{font-size:12px; margin:0; padding:7px; font-weight: 700;}
+	.grid-entry-excerpt{font-size: 10px; font-style: italic; margin-bottom: -2px;}
 
 }
