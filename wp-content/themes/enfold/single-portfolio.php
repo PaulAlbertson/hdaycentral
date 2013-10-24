@@ -35,7 +35,6 @@ global $avia_config;
 				//get the sidebar
 				$avia_config['currently_viewing'] = 'page';
 				get_sidebar();
-
 				?>
 
 			</div><!--end container-->

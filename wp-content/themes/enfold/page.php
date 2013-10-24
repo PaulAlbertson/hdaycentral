@@ -17,6 +17,9 @@ global $avia_config;
 				<div class='template-page content  <?php avia_layout_class( 'content' ); ?> units'>
 
 				<?php
+				if ( function_exists( 'sharing_display' ) ) {
+				    sharing_display( '', true );
+				}
 				/* Run the loop to output the posts.
 				* If you want to overload this in a child theme then include a file
 				* called loop-page.php and that will be used instead.

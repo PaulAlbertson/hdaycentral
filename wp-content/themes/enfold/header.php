@@ -67,13 +67,27 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 
 
 <body id="top" <?php body_class($style." ".$avia_config['font_stack']." ".$blank); ?>>
+	
+	<div id="fb-root"></div>
+	
+	<!--======================================== INNOCEAN Addition for FB Like ============================== -->
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 	<div id='wrap_all'>
 
 		<?php if(!$blank){ ?>
 
         <div id='header' class=' header_color <?php avia_is_dark_bg('header_color'); echo " ".$headerMenu; ?>'>
-
+        
 		<?php
 
 		$social_args = array('outside'=>'ul', 'inside'=>'li', 'append' => '');
@@ -133,6 +147,9 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 		<div  id='header_main' class='container_wrap container_wrap_logo'>
 
 				<?php
+				
+				//echo '<div class="fb-like" data-href="https://www.facebook.com/Hyundai" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>';
+				
 				/*
 				* Hook that can be used for plugins and theme extensions (currently:  the woocommerce shopping cart)
 				*/
@@ -173,7 +190,7 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 						);
 
     					wp_nav_menu($args);
-
+												
     					echo "</div>";
 
     					/*
@@ -181,6 +198,7 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 						*/
     					do_action('ava_after_main_menu');
 				    ?>
+				    
 				<!-- end container-->
 				</div>
 

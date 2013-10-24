@@ -102,8 +102,8 @@ div.sharedaddy ul {
 -------------------------------------------------------------- */
 
 div.sharedaddy div.sd-block {
-	border-top: 1px solid #ddd;
-	border-top: 1px solid rgba(0,0,0,.13);
+	border-top: 0px solid #ddd;
+	border-top: 0px solid rgba(0,0,0,.13);
 	padding: 10px 0 5px;
 	margin: 0;
 	width: 100% !important;
@@ -113,12 +113,48 @@ div.sharedaddy.sharedaddy-dark .sd-block {
 	border-top-color: #222;
 	border-top-color: rgba(50,50,50,.5);
 }
-
-div.sharedaddy .sd-content {
-	width: 82.125%; /* 530px / 640px */
-	float: right;
-	margin: -2px 0 0 0;
+/*
+ * INNOCEAN Responsive mods
+ */
+@media only screen and (min-width: 768px) {
+  /* Add your Desktop Styles here */
+  div.sharedaddy .sd-content {
+		width: 56%; 
+		margin-left:auto; margin-right:auto;
+	}
 }
+
+@media only screen and (min-width: 989px) and (max-width: 1140px) {
+  	  div.sharedaddy .sd-content {
+		width: 51%;
+		margin-left:auto; margin-right:auto;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+  /* Add your Desktop Styles here */
+	  div.sharedaddy .sd-content {
+		width: 51%;
+		margin-left:auto; margin-right:auto;
+	}
+}
+@media only screen and (max-width: 767px) {
+  /* Add your Mobile Styles here */
+	div.sharedaddy .sd-content {
+		width: 90%;
+
+		margin-left:auto; margin-right:auto;
+	}
+
+}
+
+
+/*div.sharedaddy .sd-content {
+	width: 82.125%; 
+	/* 530px / 640px */
+	/*float: right;
+	margin: -2px 0 0 0;
+}*/
 
 div.sharedaddy .sd-content ul {
 	margin: 0;

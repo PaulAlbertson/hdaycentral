@@ -5,6 +5,10 @@
 /* Home page custom css
  ================================================
  */
+
+#fb-like-button{position:absolute; top:12px; z-index:3;}
+#sharemenuholder{position: relative;height:40px; top:10px; margin-top:10px; margin-bottom:30px;}
+
 .menu{text-transform:uppercase;}
 .title_container{display:none;}
 /*.slide-entry{background-color:#FFFFFF;}*/
@@ -62,12 +66,14 @@ Desktop Styles
 @media only screen and (min-width: 989px) and (max-width: 1140px) {
   	.grid-entry-title{font-size:14px; margin:0; padding-top:4px; padding-bottom:7px; font-weight: 700;}
 	.grid-entry-excerpt{font-size: 12px; font-style: italic; margin-bottom: -2px;}
+	/*#fb-like-button{position:absolute; top:633px; z-index:3;}*/
 }
 
 @media only screen and (min-width: 1140px) {
   /* Add your Desktop Styles here */
 	.grid-entry-title{font-size:14px; margin:0; padding:7px; font-weight: 700;}
 	.grid-entry-excerpt{font-size: 12px; font-style: italic; margin-bottom: -2px;}
+	/*#fb-like-button{position:absolute; top:10px; z-index:3;}*/
 }
 
 /*
@@ -79,5 +85,6 @@ Mobile Styles
   /* Add your Mobile Styles here */
 	.grid-entry-title{font-size:12px; margin:0; padding:7px; font-weight: 700;}
 	.grid-entry-excerpt{font-size: 10px; font-style: italic; margin-bottom: -2px;}
+	/*#fb-like-button{position:absolute; top:633px; z-index:3;}*/
 
 }

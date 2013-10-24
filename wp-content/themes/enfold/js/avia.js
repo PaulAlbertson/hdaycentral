@@ -75,12 +75,16 @@ var newY;
 var windowHeight = $( window ).height();
 var parrallaxImageHeight = 370;
 
+/*
+ * INNOCEAN
+ */
 //after_full_slider_1 is the div id of the 
-console.log("windowHeight: "+windowHeight);
+//console.log("windowHeight: "+windowHeight);
 //var elementYPosition = (windowHeight-400);
 var elementYPosition = windowHeight;
 //$('#firstparallaxdiv').css('background-position-y', elementYPosition);
-console.log("elementYPosition: "+elementYPosition);
+//console.log("elementYPosition: "+elementYPosition);
+
 
 
 	// Custom Parallax Scroller code
@@ -137,6 +141,13 @@ console.log("elementYPosition: "+elementYPosition);
 	
 
 	//
+	
+	// Move theshare menu
+	jQuery( document ).ready( function( $ ) {
+    // Relocate Jetpack sharing buttons down into the comments form
+   // jQuery( '#sharemenuholder' ).html( jQuery( '.sharedaddy' ).detach() );
+    jQuery( '#sharemenuholder' ).append( jQuery( '.sharedaddy' ).detach() );
+} );
 	
 	
     // -------------------------------------------------------------------------------------------
