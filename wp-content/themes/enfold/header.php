@@ -143,7 +143,6 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 		<?php } ?>
 
 
-
 		<div  id='header_main' class='container_wrap container_wrap_logo'>
 
 				<?php

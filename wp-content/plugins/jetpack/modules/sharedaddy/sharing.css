@@ -192,7 +192,7 @@ div.sharedaddy a.sd-button {
 	background: linear-gradient(top, #f7f7f7 0%,#efefef 100%);
 	border-radius: 3px;
 	border: 1px solid #ddd !important;
-	box-shadow: inset 0 1px 0 #fff;
+	/*box-shadow: inset 0 1px 0 #fff;*/
 	color: #000 !important;
 	text-decoration: none;
 	line-height: 1;

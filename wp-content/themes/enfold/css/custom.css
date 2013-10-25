@@ -6,7 +6,6 @@
  ================================================
  */
 
-#fb-like-button{position:absolute; top:12px; z-index:3;}
 #sharemenuholder{position: relative;height:40px; top:10px; margin-top:10px; margin-bottom:30px;}
 
 .menu{text-transform:uppercase;}
@@ -44,7 +43,8 @@ h1.portpagefeatureh1{color:#000000; text-align: center; margin:0px; padding:0px;
  */
 #hmtwitterdisplaydiv{height:200px; font-size:32px; font-weight:bold; color:#ffffff;}
 #hmpagefooterdiv{height:400px;}
-#hmpagefooterlogodiv{padding-bottom:45px;padding-top:60px; }
+#hmpagefooterlogodiv{padding-bottom:40px;padding-top:60px; }
+#fb-like-button{position:absolute; top:67px; left:220px;}
 #hmpagefootercopyright{padding-top:30px; font-weight:bold;}
 #twitterfeedicon{text-align: center;padding-bottom:20px;}
 /*a.footerSocialIconLink{display:inline;}*/
