@@ -308,14 +308,17 @@ if ( !class_exists( 'avia_post_grid' ) )
 				$title_link     = apply_filters('avf_portfolio_title_link', $title_link, $entry);
 
 
-
+// INNOCEAN
+// Adding Read more.. to portfolio thumbnails
 				$output .= "<div data-ajax-id='{$the_id}' class=' grid-entry flex_column isotope-item all_sort {$style_class} {$post_class} {$sort_class} {$grid} {$extraClass}'>";
 				$output .= "<div class='main_color inner-entry'>";
 				$output .= apply_filters('avf_portfolio_extra', "", $entry);
 				$output .= "<".$link_markup[0]." data-rel='grid-".avia_post_grid::$grid."' class='grid-image avia-hover-fx'>".$custom_overlay.get_the_post_thumbnail( $the_id, $image_size )."</".$link_markup[1].">";
 				$output .= !empty($title) || !empty($excerpt) ? "<div class='grid-content'><div class='avia-arrow'></div>" : '';
+				// $output .= !empty($title) ? "<h3 class='grid-entry-title entry-title'><a href='{$title_link}' title='".esc_attr(strip_tags($title))."'>".$title."</a></h3>": '';
+				// $output .= !empty($excerpt) ? "<div class='grid-entry-excerpt entry-content'>".$excerpt."</div><div class='excerpt-read-more'>Read More ..</div>" : '';
 				$output .= !empty($title) ? "<h3 class='grid-entry-title entry-title'><a href='{$title_link}' title='".esc_attr(strip_tags($title))."'>".$title."</a></h3>": '';
-				$output .= !empty($excerpt) ? "<div class='grid-entry-excerpt entry-content'>".$excerpt."</div>" : '';
+				$output .= !empty($excerpt) ? "<div class='grid-entry-excerpt entry-content'>".$excerpt."</div><a href='{$title_link}'><div class='excerpt-read-more'>Read More ..</a></div>" : '';
 				$output .= !empty($title) || !empty($excerpt) ? "</div>" : '';
 				$output .= "</div>";
 				$output .= "</div>";

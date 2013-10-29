@@ -91,11 +91,11 @@ var elementYPosition = windowHeight;
 	// Parallax image height
 	document.onscroll = function(){
 		var scrolled = $(window).scrollTop();
-		console.log("scrolled: "+scrolled);
+		//console.log("scrolled: "+scrolled);
 		if (scrolled >parrallaxImageHeight && scrolled <1750){
 			scrollStartVal = scrolled;
 			if (scrollStartVal>scrollEndVal){
-				console.log("scrolled: "+scrolled);
+				//console.log("scrolled: "+scrolled);
 				//console.log("Greater than: scrollStartVal: "+scrollStartVal);
 				//console.log("Down val: "+(scrollStartVal-615));
 				//newY = scrollStartVal-370;
@@ -104,8 +104,8 @@ var elementYPosition = windowHeight;
 				//console.log("scrollStartVal: "+scrollStartVal);
 				//console.log("test: "+(windowHeight-scrollStartVal));
 				//console.log("diff check: "+(-((windowHeight-scrollStartVal)-elementYPosition)));
-				console.log("newY: "+(elementYPosition-newY));
-				//console.log("scrolled: "+scrolled);
+				//console.log("newY: "+(elementYPosition-newY));
+				////console.log("scrolled: "+scrolled);
 				//$('#firstparallaxdiv').css('background-position-y', newY);
 
 			}else if (scrollStartVal<scrollEndVal){
@@ -406,6 +406,7 @@ var elementYPosition = windowHeight;
 	   elements.each(function(e)
        {
             var link      = $(this), current = link.find('img:first');
+            var titleSlider = $(this).parent().find('.grid-content');
 
             if(current.hasClass('alignleft')) link.addClass('alignleft').css({float:'left', margin:0, padding:0});
             if(current.hasClass('alignright')) link.addClass('alignright').css({float:'right', margin:0, padding:0});
@@ -416,6 +417,16 @@ var elementYPosition = windowHeight;
                link.addClass('alignnone').css({margin:0, padding:0});;
                if(!link.css('display') || link.css('display') == 'inline') { link.css({display:'inline-block'}); }
             }
+            titleSlider.hover(
+			function(){
+				console.log("Over");
+				var grid_temp = $(this).parent().find('.grid-content');
+				grid_temp.clearQueue().finish().animate({top:$(this).parent().height() - 120, height:grid_temp.height() + 120},200);
+			}, function(){
+				console.log("Off");
+				var grid_temp = $(this).parent().find('.grid-content');
+				grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-120},200);
+			});
         });
 		/*
 		 * INNOCEAN - was able to resolve the mouseenter and mouseleave events below... so no need for this.
@@ -429,7 +440,9 @@ var elementYPosition = windowHeight;
 					// var grid_temp = $(this).parent().find('.grid-content');
 					// grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-18},200);
 			// });
-// 		
+		// var grid_temp = $('.grid-content');
+		
+		
 		elements.on('mouseenter', function(e)
 		{
 			var link  		= $(this),
@@ -442,7 +455,7 @@ var elementYPosition = windowHeight;
 				opa			= link.data('opacity') || 0;
 			var grid		= link.parent().find('.grid-content');
 			overlay = link.find('.image-overlay');
-
+			
 			if(!overlay.length)
 			{
 				if(current.outerHeight() > 100)
@@ -476,9 +489,22 @@ var elementYPosition = windowHeight;
 			{
 				// overlay.css({left:current.position().left + parseInt(current.css("margin-left"),10), top:current.position().top + parseInt(current.css("margin-top"),10)});
 					   // .css({display:'block','height':current.outerHeight(),'width':current.outerWidth()}).stop().animate({opacity:opa}, 400);
-					 
-					 var grid_temp = $(this).parent().find('.grid-content');
-					  grid_temp.clearQueue().finish().animate({top:current.height() - 42, height:grid_temp.height() + 66},200);
+				// grid.on('mouseenter', function(e){
+					// var grid_temp = $(this).parent().find('.grid-content');
+					 // grid_temp.clearQueue().finish().animate({top:current.height() - 96, height:grid_temp.height() + 120},200);
+				// });
+				// grid.hover(
+					// function(){
+							// var grid_temp = $(this).parent().find('.grid-content');
+							// var temp_height = $(this).parent().height();
+					 		// grid_temp.clearQueue().finish().animate({top:temp_height - 96, height:temp_height -87},200);
+					// }, function(){
+							// var grid_temp = $(this).parent().find('.grid-content');
+							// var temp_height = $(this).parent().height();
+							// grid_temp.clearQueue().finish().animate({top:temp_height, height:temp_height -183},200);
+				// });
+					 //var grid_temp = $(this).parent().find('.grid-content');
+					 //grid_temp.clearQueue().finish().animate({top:current.height() - 120, height:grid_temp.height() + 120},200);
 			}
 			else
 			{
@@ -487,8 +513,8 @@ var elementYPosition = windowHeight;
 
 		}).on('mouseleave', elements, function(e){
 			
-			var grid_temp = $(this).parent().find('.grid-content');
-			grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-18},200);
+			//var grid_temp = $(this).parent().find('.grid-content');
+			//grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-120},200);
 			
 			if(overlay.length)
 			{

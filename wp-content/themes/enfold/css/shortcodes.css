@@ -1318,8 +1318,8 @@ z-index: 1;
 .grid-image {display:block; width:100%; position: relative;}
 .grid-image img{width:100%; display: block;}
 /*.grid-content{position: relative; width: 100%; height: 55px; padding-top:10px; padding-bottom:14px; overflow:hidden; }*/
-.grid-content{position: absolute; width: 100%; height: 55px; padding-top:10px; padding-bottom:14px; overflow:hidden; }
-.grid-entry-title{font-size:14px; margin:0; padding:7px; font-weight: 700;}
+.grid-content{position: absolute; width: 100%; height: 70px; overflow:hidden; }
+.grid-entry-title{display:table-cell; vertical-align:middle; font-size:14px; margin:0; padding:20px; font-weight: bold;}
 .grid-entry-excerpt{font-size: 12px; font-style: italic; margin-bottom: -2px;}
 .with-excerpt-container .grid-entry{text-align: center;}
 
