@@ -149,7 +149,7 @@ var elementYPosition = windowHeight;
     jQuery( '#sharemenuholder' ).append( jQuery( '.sharedaddy' ).detach() );
 } );
 	
-	
+
     // -------------------------------------------------------------------------------------------
 	// responsive menu function
 	// -------------------------------------------------------------------------------------------
@@ -417,17 +417,20 @@ var elementYPosition = windowHeight;
                link.addClass('alignnone').css({margin:0, padding:0});;
                if(!link.css('display') || link.css('display') == 'inline') { link.css({display:'inline-block'}); }
             }
+            /* 
+             * INNOCEAN New Slider hover controls
+             */
             titleSlider.hover(
-			function(){
-				console.log("Over");
-				var grid_temp = $(this).parent().find('.grid-content');
-				grid_temp.clearQueue().finish().animate({top:$(this).parent().height() - 120, height:grid_temp.height() + 120},200);
-			}, function(){
-				console.log("Off");
-				var grid_temp = $(this).parent().find('.grid-content');
-				grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-120},200);
-			});
-        });
+				function(){
+					console.log("Over");
+					var grid_temp = $(this).parent().find('.grid-content');
+					grid_temp.clearQueue().finish().animate({top:$(this).parent().height() - 120, height:grid_temp.height() + 120},200);
+				}, function(){
+					console.log("Off");
+					var grid_temp = $(this).parent().find('.grid-content');
+					grid_temp.clearQueue().finish().animate({top:$(this).parent().height(), height:grid_temp.height()-120},200);
+				});
+	        });
 		/*
 		 * INNOCEAN - was able to resolve the mouseenter and mouseleave events below... so no need for this.
 		 */
@@ -753,7 +756,6 @@ var elementYPosition = windowHeight;
 					pos = item.position(),
 					megaDiv = item.find("div:first").css({opacity:0, display:"none"}),
 					normalDropdown = "";
-
 				//check if we got a mega menu
 				if(!megaDiv.length)
 				{
@@ -870,7 +872,10 @@ var elementYPosition = windowHeight;
 					}
 				);
 			});
-
+			/*
+			 * INNOCEAN add over line
+			 */
+			//$("li.current-menu-item").css({border:2});
 
 			// bind events for dropdown menu
 			dropdownItems.find('li').andSelf().each(function()
@@ -878,7 +883,6 @@ var elementYPosition = windowHeight;
 				var currentItem = $(this),
 					sublist = currentItem.find('ul:first'),
 					showList = false;
-
 				if(sublist.length)
 				{
 					sublist.css({display:'block', opacity:0, visibility:'hidden'});
