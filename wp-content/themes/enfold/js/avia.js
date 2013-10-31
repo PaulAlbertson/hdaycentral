@@ -282,7 +282,11 @@ var elementYPosition = windowHeight;
                             reduction_space_right = item_padding_right * first_level_items,
                             new_remaining_space = (remaining_space + reduction_space_left + reduction_space_right) - logo_width;
 
-                        $('#header .logo,#header .logo a img').css('width',"auto");
+                        //$('#header .logo,#header .logo a img').css('width',"auto");
+                        /*
+                         * INNOCEAN make background image scale
+                         */
+                        $('#header .logo,#header .logo a img').css('background-size',logo_width);
 
                         if((original_menu_width + logo_width) <= header_width)
                         {
