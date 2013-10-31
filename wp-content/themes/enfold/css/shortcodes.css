@@ -1318,7 +1318,7 @@ z-index: 1;
 .grid-image {display:block; width:100%; position: relative;}
 .grid-image img{width:100%; display: block;}
 /*.grid-content{position: relative; width: 100%; height: 55px; padding-top:10px; padding-bottom:14px; overflow:hidden; }*/
-.grid-content{position: absolute; width: 100%; height: 70px; overflow:hidden; }
+.grid-content{position: absolute; width: 100%; height: 70px; overflow:hidden;}
 .grid-entry-title{display:table-cell; vertical-align:middle; font-size:14px; margin:0; padding:20px; font-weight: bold;}
 .grid-entry-excerpt{font-size: 12px; font-style: italic; margin-bottom: -2px;}
 .with-excerpt-container .grid-entry{text-align: center;}
@@ -2086,7 +2086,7 @@ width:60px;
 text-align: center;
 height: 60px;
 line-height: 62px;
-font-size: 25px;
+font-size: 40px;
 top:50%;
 margin:-30px 15px 0;
 z-index: 99;
@@ -2104,7 +2104,7 @@ display: block;
 position: absolute;
 z-index: 100;
 background: #aaa;
-background: rgba(0,0,0,0.3);
+background: rgba(0,0,0,0);
 top:0;
 left:0;
 right:0;
@@ -2112,7 +2112,7 @@ bottom:0;
 border-radius: 3px;
 text-align: center;
 line-height: 62px;
-color:#fff;
+color:#46c8f5;
 }
 
 
@@ -2130,8 +2130,8 @@ text-indent: 0px;
 }
 
 .avia-slideshow-dots{position: absolute; z-index: 200; width:80%; bottom:10px; text-align: center; left: 10%;}
-.avia-slideshow-dots a{display: inline-block; height:13.5px; width:13.5px; border-radius: 14px; background: #000; opacity: 0.6; filter:alpha(opacity=60); text-indent: 300%; overflow: hidden; margin:0 1px; padding: 7px;}
-.avia-slideshow-dots a.active, .avia-slideshow-dots a:hover{opacity: 0.8; filter:alpha(opacity=80); background: #fff;}
+.avia-slideshow-dots a{display: inline-block; height:13.5px; width:13.5px; background: #ffffff; opacity: 1; filter:alpha(opacity=100); text-indent: 300%; overflow: hidden; margin:0 1px; padding: 7px;}
+.avia-slideshow-dots a.active, .avia-slideshow-dots a:hover{opacity: 1; filter:alpha(opacity=100); background: #46c8f5;}
 
 .avia-caption{position: absolute; z-index: 10; bottom:17px; left:17px; padding:10px 20px; color:#fff; border-radius: 3px; }
 .avia-slideshow .avia-caption .avia-caption-title{ color:#fff; }

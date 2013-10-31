@@ -453,7 +453,7 @@ if ( !class_exists( 'avia_slideshow' ) )
 
 						if($this->config['handle'] == 'av_slideshow_full' || $this->config['handle'] == 'av_fullscreen')
 						{
-							$caption .= '<div class = "caption_fullwidth '.$caption_pos.'">';
+							$caption .= '<div class = "in-caption-back caption_fullwidth '.$caption_pos.'">';
 							$caption .= 	'<div class = "container caption_container">';
 							$caption .= 			'<div class = "slideshow_caption">';
 							$caption .= 				'<div class = "slideshow_inner_caption">';

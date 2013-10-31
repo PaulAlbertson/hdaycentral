@@ -709,7 +709,9 @@ var elementYPosition = windowHeight;
 		};
 	})(jQuery);
 
-
+(function($){
+	$('in-caption-back').addClass('in-caption-back');
+},(jQuery));
 
 // -------------------------------------------------------------------------------------------
 // Avia Menu

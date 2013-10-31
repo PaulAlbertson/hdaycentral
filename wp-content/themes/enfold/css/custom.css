@@ -9,12 +9,15 @@
 /*
  * Header== =======================================
  */
-.logo img{padding:0px;}
+.logo img{padding:0px; background-image:url('/wp-content/uploads/2013/10/hyundai-logo-blue-340x88.gif');background-repeat:no-repeat;}
 /*.current-menu-item{font-size:30px;}*/
 li.current-menu-item{background-position: 0% 100%; background-image:url('/wp-content/uploads/2013/10/navigation-highlight.gif');background-repeat:no-repeat;}
 li.current_page_item{background-position: 0% 100%; background-image:url('/wp-content/uploads/2013/10/navigation-highlight.gif');background-repeat:no-repeat;}
-
+.avia-slide-wrap{background-color:#dbdbdb;}
 #sharemenuholder{position: relative;height:40px; top:10px; margin-top:10px; margin-bottom:30px;}
+/*.in-caption-back{position:absolute; width:100%; height:50px; top:40%; background-color:#000000;z-index:1;}*/
+
+
 
 .menu{text-transform:uppercase;}
 .title_container{display:none;}
@@ -71,43 +74,103 @@ Desktop Styles
 @media only screen and (min-width: 768px) and (max-width: 989px){
   /* Add your Desktop Styles here */
   /*.avia_textblock{width:750px; margin-left:15%;}*/
+ 	#undersliderintrobox{height: 180px; background-image:url('/wp-content/uploads/2013/10/getToKnowUs-med-767x146.gif');background-repeat:no-repeat; background-size: 100%, 0%;}
+	 .logo img{padding:0px; background-image:url('/wp-content/uploads/2013/10/hyundai-mobile-logo-159x88.gif');background-repeat:no-repeat;}
 	.grid-entry-title{height:70px; font-size:12px; margin-left:8px; padding:8px; margin-bottom:20px; margin-top:10px;  line-height:16px; font-weight: bold; text-align:left;}
 	.grid-entry-excerpt{font-size: 11px; font-weight:bold; font-style: normal; margin-left:8px; margin-bottom: -2px; padding-top:20px; line-height:14px; text-align:left; background-image:url('/wp-content/uploads/2013/10/sectionDividerArrowGraphicTeal.png'); background-size:152px; background-repeat:no-repeat;}
+	
+	.in-caption-back{background-image:url('/wp-content/uploads/2013/10/caption_background_image.png'); background-size:100% 50%; background-position: 0% 50%; background-repeat:no-repeat;}
+	.responsive #top .slideshow_caption h2{font-size: 26px;}
+	.responsive #top .slideshow_caption {font-weight:bold; left: 0; width:100%; padding:0; line-height:16px;}
+	.avia-slideshow-dots{position: absolute; z-index: 200; width:80%; bottom:80px; text-align: center; left: 10%;}
+
+	.responsive .av_slideshow_full .container.caption_container{margin-top:-80px;}
 }
 
 @media only screen and (min-width: 989px) and (max-width: 1140px) {
+	#undersliderintrobox{height: 90px; background-image:url('/wp-content/uploads/2013/10/getToKnowUs-lg-1300x105.gif');background-repeat:no-repeat; background-size: 100%, 0%;}
   	.grid-entry-title{height:70px; font-size:14px; margin-left:8px; padding:8px; margin-bottom:20px; margin-top:10px;  line-height:16px; font-weight: bold; text-align:left;}
 	.grid-entry-excerpt{font-size: 12px; font-weight:bold; font-style: normal; margin-left:8px; margin-right:14px; padding-top:24px; line-height:15px; text-align:left; background-image:url('/wp-content/uploads/2013/10/sectionDividerArrowGraphicTeal.png'); background-size:220px; background-repeat:no-repeat;}
 	/*#fb-like-button{position:absolute; top:633px; z-index:3;}*/
+	
+	.in-caption-back{background-image:url('/wp-content/uploads/2013/10/caption_background_image.png'); background-size:100% 50%; background-position: 0% 50%; background-repeat:no-repeat;}
+	.responsive #top .slideshow_caption h2{font-size: 28px;}
+	.responsive #top .slideshow_caption {font-weight:bold; font-size:16px; left: 0; width:100%; padding:0; line-height:16px;}
+	.avia-slideshow-dots{position: absolute; z-index: 200; width:80%; bottom:100px; text-align: center; left: 10%;}
+
+	.responsive .av_slideshow_full .container.caption_container{margin-top:-120px;}
 }
 
 @media only screen and (min-width: 1140px) and (max-width:1340px) {
   /* Add your Desktop Styles here */
+ 	#undersliderintrobox{height: 110px; background-image:url('/wp-content/uploads/2013/10/getToKnowUs-lg-1300x105.gif');background-repeat:no-repeat; background-size: 100%, 0%;}
 	.grid-entry-title{height:70px; font-size:14px; margin-left:8px; margin-bottom:20px; margin-top:10px;  line-height:14px; font-weight: bold; text-align:left;}
 	.grid-entry-excerpt{font-size: 13px; font-weight:bold; font-style: normal; margin-left:8px; margin-right:14px; padding-top:30px; line-height:15px; text-align:left; background-image:url('/wp-content/uploads/2013/10/sectionDividerArrowGraphicTeal.png'); background-size:240px; background-repeat:no-repeat;}
 	/*#fb-like-button{position:absolute; top:10px; z-index:3;}*/
+	
+	.in-caption-back{background-image:url('/wp-content/uploads/2013/10/caption_background_image.png'); background-size:100% 50%; background-position: 0% 50%; background-repeat:no-repeat;}
+	.responsive #top .slideshow_caption h2{font-size: 28px;}
+	.responsive #top .slideshow_caption {font-weight:bold; font-size:16px; left: 0; width:100%; padding:0; line-height:16px;}
+	.avia-slideshow-dots{position: absolute; z-index: 200; width:80%; bottom:25%; text-align: center; left: 10%;}
+
+	.responsive .av_slideshow_full .container.caption_container{margin-top:-140px;}
 }
 @media only screen and (min-width: 1340px){
   /* Add your Desktop Styles here */
+ 	#undersliderintrobox{height: 170px; background-image:url('/wp-content/uploads/2013/10/getToKnowUs-lg-1300x105.gif');background-repeat:no-repeat; background-size: 100%, 0%;}
 	.grid-entry-title{height:70px; font-size:14px; margin-left:8px; margin-bottom:20px; margin-top:10px;  line-height:14px; font-weight: bold; text-align:left; }
 	.grid-entry-excerpt{font-size:12px; font-weight:bold; font-style: normal; margin-left:14px; margin-right:14px; padding-top:34px; line-height:16px; text-align:left; background-image:url('/wp-content/uploads/2013/10/sectionDividerArrowGraphicTeal.png'); background-size:270px; background-repeat:no-repeat;}
 	/*#fb-like-button{position:absolute; top:10px; z-index:3;}*/
+	
+	.in-caption-back{background-image:url('/wp-content/uploads/2013/10/caption_background_image.png'); background-size:100% 50%; background-position: 0% 50%; background-repeat:no-repeat;}
+	.responsive #top .slideshow_caption h2{font-size: 28px;}
+	.responsive #top .slideshow_caption {font-weight:bold; font-size:16px; left: 0; width:100%; padding:0; line-height:16px;}
+	.avia-slideshow-dots{position: absolute; z-index: 200; width:80%; bottom:25%; text-align: center; left: 10%;}
+
+	.responsive .av_slideshow_full .container.caption_container{margin-top:-160px;}
 }
 /*
 Mobile Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
-
+/*
+ * /wp-content/uploads/2013/10/hyundai-mobile-logo-159x88.gif
+ */
 @media only screen and (max-width:480px){
+	#undersliderintrobox{height: 160px; background-image:url('/wp-content/uploads/2013/10/getToKnowUs-sm-480x164.gif');background-repeat:no-repeat; background-size: 100%, 0%;}
+	
+	.logo img{padding:0px; background-image:url('/wp-content/uploads/2013/10/hyundai-mobile-logo-159x88.gif');background-repeat:no-repeat;}
 	.grid-entry-title{height:70px; font-size:12px; margin-left:8px; padding:6px; margin-bottom:20px; margin-top:10px;  line-height:16px; font-weight: bold; text-align:left;}
 	.grid-entry-excerpt{font-size: 11px; font-weight:bold; font-style: normal; margin-left:8px; margin-right:14px; padding-top:30px; line-height:15px; text-align:left; background-image:url('/wp-content/uploads/2013/10/sectionDividerArrowGraphicTeal.png'); background-size:240px; background-repeat:no-repeat;}
+	
+	.in-caption-back{background-image:url('/wp-content/uploads/2013/10/caption_background_image.png'); background-size:100% 90%; background-position: 0% 50%; background-repeat:no-repeat;}
+	.responsive #top .slideshow_caption h2{font-size: 18px;}
+	.responsive #top .slideshow_caption {font-weight:bold; left: 0; width:100%; padding:0; line-height:14px;}
+
+	.responsive .av_slideshow_full .container.caption_container{margin-top:0px; }
+
 }
+
 @media only screen and (min-width: 481px) and (max-width:768px) {
+	
+	#undersliderintrobox{height: 260px; background-image:url('/wp-content/uploads/2013/10/getToKnowUs-sm-480x164.gif');background-repeat:no-repeat; background-size: 100%, 0%;}
+	
+	.logo img{padding:0px; background-image:url('/wp-content/uploads/2013/10/hyundai-mobile-logo-159x88.gif');background-repeat:no-repeat;}
   /* Add your Mobile Styles here */
 	.grid-entry-title{height:70px; font-size:12px; margin-left:8px; padding:6px; margin-bottom:20px; margin-top:10px;  line-height:16px; font-weight: bold; text-align:left;}
 	/*.grid-entry-excerpt{font-size: 10px; font-style: italic; margin-bottom: -2px;}*/		
 	.grid-entry-excerpt{font-size: 10px; font-weight:bold; font-style: normal; margin-left:8px; margin-right:14px; padding-top:30px; line-height:15px; text-align:left; background-image:url('/wp-content/uploads/2013/10/sectionDividerArrowGraphicTeal.png'); background-size:191px; background-repeat:no-repeat;}
 
 	/*#fb-like-button{position:absolute; top:633px; z-index:3;}*/
+	
+	.in-caption-back{background-image:url('/wp-content/uploads/2013/10/caption_background_image.png'); background-size:100% 90%; background-position: 0% 50%; background-repeat:no-repeat;}
+	.responsive #top .slideshow_caption h2{font-size: 24px;}
+	.responsive #top .slideshow_caption {font-weight:bold; left: 0; width:100%; padding:0; line-height:16px;}
+	
+	/*.avia-slideshow-dots{position: absolute; z-index: 200; width:420px; bottom:10%; text-align: left; margin-left:auto; margin-right:auto; background-color:red;}*/
+	.avia-slideshow-dots{position: absolute; z-index: 200; width:80%; bottom:10px; text-align: center; left: 10%;}
+	.responsive .av_slideshow_full .container.caption_container{margin-top:-30px; margin-left: -195px;}
+	
+
 
 }
