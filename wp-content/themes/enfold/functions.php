@@ -211,13 +211,18 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_register_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_register_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 		wp_register_script( 'wp-mediaelement',  $template_url.'/js/mediaelement/mediaelement-and-player.min.js', 'jquery', "1", true);
-
+		/*
+		 * INNOCEAN add iperceptions script
+		 */
+		wp_register_script( 'iwa-iperceptions', '/iperceptions/108893/en/ipecc_108893_en.js', 'jquery',"1", true);
+		
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'avia-compat' );
 		wp_enqueue_script( 'avia-default' );
 		wp_enqueue_script( 'avia-shortcodes' );
 		wp_enqueue_script( 'avia-prettyPhoto' );
 		wp_enqueue_script( 'wp-mediaelement' );
+		wp_enqueue_script( 'iwa-iperceptions' );
 
 
 		if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }

@@ -269,7 +269,23 @@ var elementYPosition = windowHeight;
                         header_width = headercontainer.outerWidth(false),
                         logo_width = $('#header .logo').outerWidth(true),
                         remaining_space = (header_width - $(menu).outerWidth(true));
-
+                     
+                     /*
+                         * INNOCEAN make background image scale
+                         */
+					var browserWidth = $( document ).width();
+					
+                    if (browserWidth<990){
+                    	//console.log("less than 990");
+                    	//console.log("logo_width: "+logo_width);
+                    	$('#header .logo,#header .logo a img').css('background-size','159px');
+                    	// .logo img{padding:0px; background-image:url('/wp-content/uploads/2013/10/hyundai-mobile-logo-159x88.gif');background-repeat:no-repeat;}
+                    };
+                    if(browserWidth>990){
+                    	//console.log("Greater than 990");
+                    	//console.log("logo_width: "+logo_width);
+                    	$('#header .logo,#header .logo a img').css('background-size',logo_width);
+                    };
                     if(win.width() > switchWidth)
                     {
                         /*
@@ -283,10 +299,6 @@ var elementYPosition = windowHeight;
                             new_remaining_space = (remaining_space + reduction_space_left + reduction_space_right) - logo_width;
 
                         //$('#header .logo,#header .logo a img').css('width',"auto");
-                        /*
-                         * INNOCEAN make background image scale
-                         */
-                        $('#header .logo,#header .logo a img').css('background-size',logo_width);
 
                         if((original_menu_width + logo_width) <= header_width)
                         {
