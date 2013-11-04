@@ -48,6 +48,8 @@ h1.portpagefeatureh1{color:#000000; text-align: center; margin:0px; padding:0px;
 .portpagedatetext{font-size:13px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:5px;}
 .portpagerelstoriestext{font-size:14px; text-align: center; font-weight:bold; padding-top:5px; padding-bottom:5px;}
 .main_color .container_wrap .fullsize{background-color:#045675;}
+#morelinkbackdiv{width:750px; text-align:center;}
+a.seemorelinkback{font-size:14px; font-weight:bold; color:#3b98c4; text-decoration:underline;}
 
 /* Footer
  ==================================================
